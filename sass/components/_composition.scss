@@ -1,0 +1,59 @@
+.composition {
+  position: relative;
+  
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .8);
+
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+
+    position: absolute;
+    z-index: 10;
+    outline-offset: 1.5rem;
+
+    transition: all .2;
+    -webkit-transition: all .2;
+    -moz-transition: all .2;
+    -ms-transition: all .2;
+    -o-transition: all .2;
+
+    &--p1{
+      left: 0;
+      top: -2rem;
+    }
+
+    &--p2 {
+      right: 0;
+      top: 2rem;
+    }
+
+    &--p3 {
+      left: 10rem;
+      top: 10rem;
+      
+    }
+
+    &:hover {
+      outline: 1.5rem solid $color-primary;
+      box-shadow: 0 2.5rem 4rem rgba($color-black, .4);
+      transform: scale(1.05) translateY(-.5rem);
+      -webkit-transform: scale(1.05) translateY(-.5rem);
+      -moz-transform: scale(1.05) translateY(-.5rem);
+      -ms-transform: scale(1.05) translateY(-.5rem);
+      -o-transform: scale(1.05) translateY(-.5rem);
+      z-index: 20;
+}
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(.95);
+    -webkit-transform: scale(.95);
+    -moz-transform: scale(.95);
+    -ms-transform: scale(.95);
+    -o-transform: scale(.95);
+  }
+}
